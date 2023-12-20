@@ -1,11 +1,5 @@
-/**
- * Infra! Mongo 🙌
- */
 import { UserEntity } from '../../domain/user.entity'
 import { UserRepository } from '../../domain/user.repository'
-/**
- * MOCK!
- */
 
 const MOCK_USER = {
   name: 'Leifer',
