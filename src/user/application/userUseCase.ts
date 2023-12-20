@@ -4,18 +4,14 @@ import { UserValue } from '../domain/user.value'
 interface registerProps {
   name: string
   email: string
-  description?: string
+  password: string
 }
 
 export class UserUseCase {
   constructor(private readonly userRepository: UserRepository) {}
-  public registerUser = async ({
-    name,
-    email,
-    description = '',
-  }: registerProps) => {
-    console.log(description)
-    const userValue = new UserValue({ name, email })
+
+  public registerUser = async ({ name, email, password }: registerProps) => {
+    const userValue = new UserValue({ name, email, password })
     const userCreated = await this.userRepository.registerUser(userValue)
     return userCreated
   }

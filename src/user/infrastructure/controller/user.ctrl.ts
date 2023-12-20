@@ -1,5 +1,5 @@
-import { Request, Response } from "express";
-import { UserUseCase } from "../../application/userUseCase";
+import { Request, Response } from 'express'
+import { UserUseCase } from '../../application/userUseCase'
 
 export class UserController {
   constructor(private userUseCase: UserUseCase) {
@@ -8,13 +8,13 @@ export class UserController {
   }
 
   public async getCtrl({ query }: Request, res: Response) {
-    const { uuid = '' } = query;
-    const user = await this.userUseCase.getDetailUSer(`${uuid}`);
-    res.send({ user });
+    const { uuid = '' } = query
+    const user = await this.userUseCase.getDetailUSer(`${uuid}`)
+    res.send({ user })
   }
 
   public async insertCtrl({ body }: Request, res: Response) {
-    const user = await this.userUseCase.registerUser(body);
-    res.send({ user });
+    const user = await this.userUseCase.registerUser(body)
+    res.send({ user })
   }
 }

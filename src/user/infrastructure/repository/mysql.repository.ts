@@ -1,12 +1,7 @@
-/**
- * Infra! Mongo 🙌
- */
 import { UserEntity } from '../../domain/user.entity'
 import { UserRepository } from '../../domain/user.repository'
 import UserModel from '../model/user.schema'
-/**
- * Mysql!
- */
+
 export class MySqlRepository implements UserRepository {
   async findUserById(uuid: string): Promise<any> {
     const user = await UserModel.findOne({ uuid })

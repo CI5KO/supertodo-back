@@ -1,14 +1,6 @@
 import 'dotenv/config'
-import express from 'express'
-import cors from 'express'
-import userRoute from './user/infrastructure/route/user.route'
+import app from './app'
 
-const app = express()
-app.use(cors())
-app.use(express.json())
+const port = process.env.PORT || 3100
 
-const port = process.env.PORT || 3001
-
-app.use(userRoute)
-
-app.listen(port, () => console.log(`USER, Listo por el puerto ${port}`))
+app.listen(port, () => console.log(`App ready on port: ${port}`))
