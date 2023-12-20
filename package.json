@@ -3,17 +3,17 @@
   "version": "1.0.0",
   "private": true,
   "main": "index.js",
+  "author": {
+    "name": "Héctor Oliva",
+    "email": "hector_oliva16k@hotmail.com"
+  },
+  "license": "MIT",
   "scripts": {
     "build": "tsc",
     "dev": "ts-node-dev ./src/index.ts",
     "start": "node ./build/src/index.js"
   },
   "keywords": [],
-  "author": {
-    "name": "Héctor Oliva",
-    "email": "hector_oliva16k@hotmail.com"
-  },
-  "license": "MIT",
   "dependencies": {
     "cors": "2.8.5",
     "dotenv": "16.3.1",
